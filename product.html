@@ -82,9 +82,10 @@
                                 </div>
                             </div>
                         </div>
-                        <template v-if="selectedProduct.title" v-for="(item,idx) in selectedProduct.imagesUrl"
-                            :key="idx">
-                            <img :src="item" alt="" class="images m-2">
+                        <template v-for="(item,idx) in selectedProduct.imagesUrl" :key="idx">
+                            <a href="#" @click.prevent="showImage(idx)">
+                                <img :src="item" alt="" class="images m-2">
+                            </a>
                         </template>
                     </template>
                     <p class="text-secondary" v-else>請選擇一個商品查看</p>

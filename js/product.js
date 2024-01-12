@@ -29,6 +29,9 @@ const app = Vue.createApp({
         },
         checkDetail(id) {
             this.selectedProduct = this.products.find(item => item.id === id);
+        },
+        showImage(id){
+            this.selectedProduct.imageUrl = this.selectedProduct.imagesUrl[id]
         }
     },
     mounted() {
